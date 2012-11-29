@@ -1,0 +1,94 @@
+\documentclass
+[ a4paper, 10pt, DIV15, openany, oneside, headsepline,
+footsepline,plainfootsepline,nochapterprefix,BCOR12mm,
+DIVcalc,
+]{scrreprt}
+
+\linespread{1.25}\selectfont
+\usepackage{graphicx} 
+\usepackage[ngerman,english]{babel} 
+%\usepackage[latin1]{inputenc} 
+\usepackage[ansinew]{inputenc}
+
+\usepackage{ulem}
+\usepackage{natbib}
+\usepackage{scrpage2}
+\usepackage{nomencl}
+\usepackage[pdftex]{hyperref} 
+\automark[section]{chapter}
+\usepackage{geometry}
+\geometry{a4paper, margin={3cm}}
+\usepackage{framed}
+\usepackage{mathtext}
+\usepackage{epsfig}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{ae} 
+%\usepackage{pstricks}
+\usepackage{tabularx}
+\usepackage{colortbl}
+\usepackage{url}
+\usepackage{listings}
+
+\newcommand{\codebox}[1]{\\[4mm]\framebox[149mm][l]{#1}\\[4mm]}
+\newenvironment{codeboxframe}{\begin{framed}\setlength{\hsize}{149mm}}{\end{framed}}
+
+\setlength{\headheight}{1.1\baselineskip}
+\setlength{\parskip}{1ex plus0.5ex minus0.2ex} 
+\setlength{\itemsep}{0ex plus0.2ex} 
+
+\parindent=0cm
+\parskip=1mm 
+
+\setlength{\belowcaptionskip}{-12pt}
+\setlength{\abovecaptionskip}{-5pt}
+
+\pagestyle{scrheadings} \lohead{} \cohead{} \rohead{\headmark}
+\lofoot[\autor]{\autor} \cofoot[Version \version]{Version \version}
+\rofoot[\pagemark]{\pagemark}
+
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
+\makeatother
+
+\newcommand{\version}{1.0}
+\newcommand{\autor}{ }
+
+
+\newcommand{\titel}{The Simple\\Pendulum}
+
+\begin{document}
+
+\selectlanguage{\english}
+
+\titlehead{\centering Science Lap Report}
+
+\subject{}
+\title{\titel}
+\author{\begin{tabular}{p{15mm}p{41mm} p{15mm} p{25mm}}
+ & \autor\\\\
+ & Dominik Thiesing, & 10967,  & ME Sem. 3 \\
+ & Jan K\"{u}chler,  & 10920,  & ME Sem. 3 \\
+ & Holger Hanrath,   & 11145,  & ME Sem. 3 \\
+\\\\
+\end{tabular}}
+\date{Performed the experiment on: 14.11.2012\\Submission of the report: 28.11.2012}
+
+\publishers{
+%\includegraphics[width=328pt,height=136pt]{hsrw.png}\\
+}
+
+\maketitle
+
+\pagebreak 
+
+test
+
+\end{document}
+
+
+
+
+
+
